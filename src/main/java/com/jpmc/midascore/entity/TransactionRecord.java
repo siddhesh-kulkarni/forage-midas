@@ -3,7 +3,7 @@ package com.jpmc.midascore.entity;
 import jakarta.persistence.*;
 
 @Entity
-public class Transaction {
+public class TransactionRecord {
 
     @Id
     @GeneratedValue
@@ -18,10 +18,10 @@ public class Transaction {
     @Column(nullable = false)
     private float amount;
 
-    protected Transaction() {
+    protected TransactionRecord() {
     }
 
-    public Transaction(UserRecord sender, UserRecord recipient, float amount) {
+    public TransactionRecord(UserRecord sender, UserRecord recipient, float amount) {
         this.sender = sender;
         this.recipient = recipient;
         this.amount = amount;
